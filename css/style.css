@@ -710,11 +710,9 @@ address {
   align-items: center;
   padding: 24px;
 
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 28px;
+  line-height: calc(28 / 18);
   letter-spacing: 0.03em;
   transform: translateY(100%);
   opacity: 0;
@@ -783,7 +781,7 @@ address {
 .modal h2 {
   font-weight: 700;
   font-size: 20px;
-  line-height: 23px;
+  line-height: calc(23 / 20);
   text-align: center;
   letter-spacing: 0.03em;
 
@@ -805,12 +803,22 @@ address {
   color: var(--white);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-
 }
 
 .modal-form {
   padding-right: 40px;
   padding-left: 40px;
+}
+
+.modal-label {
+  display: inline-block;
+  width: 100%;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: #757575;
 }
 
 .modal-input {
@@ -819,10 +827,49 @@ address {
   margin-bottom: 10px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
-border-radius: 4px;
+  border-radius: 4px;
+  padding: 12px;
 }
 
-/* .modal-input:hover {
-  border: 1px solid var(--accent-color);
-border-radius: 4px;
-} */
+.modal-input::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-textarea {
+  height: 120px;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+.policy {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.label-checkbox {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+
+.term-policy {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  text-decoration: underline;
+
+  color: var(--accent-color);
+}
+
